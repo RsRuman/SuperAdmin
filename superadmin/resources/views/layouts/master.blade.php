@@ -6,6 +6,7 @@
   <title>AdminLTE 3 | Blank Page</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="/css/app.css">
@@ -13,7 +14,7 @@
 </head>
 <body class="hold-transition sidebar-mini">
     <!-- Site wrapper -->
-    <div class="wrapper">
+    <div class="wrapper" id="app">
         <!-- Navbar -->      
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <!-- Left navbar links -->
@@ -58,22 +59,22 @@
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <li class="nav-item">
-                        <a href="../../index.html" class="nav-link">
+                        <router-link to="/dasboard" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>Dashboard</p>
-                        </a>
+                        </router-link>
                     </li>
                     <li class="nav-item">
-                        <a href="../../index.html" class="nav-link">
+                        <router-link to="/profile" class="nav-link">
                         <i class="nav-icon fas fa-user"></i>
                         <p>Profile</p>
-                        </a>
+</router-link>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <router-link to="/" class="nav-link">
                         <i class="nav-icon fas fa-cog"></i>
                         <p>Management<i class="right fas fa-angle-left"></i></p>
-                        </a>
+</router-link>
                     </li>
                     <li class="nav-item">
                         <a href="../../index.html" class="nav-link">
@@ -87,7 +88,7 @@
         
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
-
+            <router-view></router-view>
         </div>
     </div>
     <footer class="main-footer">

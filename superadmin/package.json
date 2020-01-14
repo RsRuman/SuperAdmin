@@ -25,6 +25,7 @@
     },
     "dependencies": {
         "@fortawesome/fontawesome": "^1.1.8",
-        "admin-lte": "^3.0.1"
+        "admin-lte": "^3.0.1",
+        "vue-router": "^3.1.4"
     }
 }
