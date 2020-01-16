@@ -18,3 +18,15 @@ $fa-font-path: "../webfonts";
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
+.router-link-exact-active{
+  background-color: #fd7e14 !important;
+  color: white !important;
+}
+.card-header {
+  background-color: #fd7e14 !important;
+}
+.card-title {
+  color: aliceblue !important;
+  font-size: 20px;
+}
+

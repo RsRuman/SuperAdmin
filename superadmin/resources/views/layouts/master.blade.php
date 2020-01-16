@@ -3,9 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Blank Page</title>
+  <title>Super Admin</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="csrf-token" content="{{ csrf_token() }}">
   
 
   <!-- Font Awesome -->
@@ -60,27 +61,47 @@
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <li class="nav-item">
                         <router-link to="/dasboard" class="nav-link">
-                        <i class="nav-icon fas fa-tachometer-alt"></i>
+                        <i class="green nav-icon fas fa-tachometer-alt"></i>
                         <p>Dashboard</p>
                         </router-link>
                     </li>
                     <li class="nav-item">
                         <router-link to="/profile" class="nav-link">
-                        <i class="nav-icon fas fa-user"></i>
+                        <i class="blue nav-icon fas fa-user"></i>
                         <p>Profile</p>
 </router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link to="/" class="nav-link">
-                        <i class="nav-icon fas fa-cog"></i>
+                        <a href ="#" class="nav-link">
+                        <i class="pink nav-icon fas fa-cog"></i>
                         <p>Management<i class="right fas fa-angle-left"></i></p>
-</router-link>
-                    </li>
-                    <li class="nav-item">
-                        <a href="../../index.html" class="nav-link">
-                        <i class="nav-icon fas fa-power-off"></i>
-                        <p>Logout</p>
                         </a>
+                        <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <router-link to="/users" class="nav-link">
+                            <i class="fas fa-users"></i>
+                            <p>Users</p>
+                            </router-link>
+                        </li>
+                        </ul>
+                    </li>
+
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('logout') }}"onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+                            <i class="red nav-icon fas fa-power-off"></i>
+                            <p>Logout</p>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                            </form>
+                        </a>
+
+                        
+
+                                    
+
+
                     </li>
                 </ul>
             </nav>
