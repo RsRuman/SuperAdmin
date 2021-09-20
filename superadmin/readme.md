@@ -1,1 +1,1 @@
- **[Vehikl](https://vehikl.com/)**
+ **[Vehikl]**
